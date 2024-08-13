@@ -359,3 +359,96 @@
 
 
 
+
+
+//largest in loop
+
+// let arr=[1,2,3,4,5,6,7,8,9]
+// larg=arr[0]
+// for(i=1;i<=arr.length;i++)
+//     {
+//         if(arr[i]>larg){
+//     larg=arr[i]
+//     }
+
+//     }
+// console.log(larg);
+
+
+
+
+
+
+
+
+// object 1st class
+// object=[
+//     {name:"leoo",age:19,mark:"pass",course:"js"},
+//     {name:"messi",age:39,mark:"pass",course:"js"},
+//     {name:"don",age:15,mark:"pass",course:"js"},
+//     {name:"abhi",age:19,mark:"pass",course:"js"}
+// ]
+
+
+// // console.log(object[3]);
+// for(i in object){
+//     console.log(object[i].name);
+// }
+
+
+
+// x=JSON.stringify(object)
+// console.log(x);
+// y=JSON.parse(x)
+// console.log(y);
+
+let todo=[]
+while (true) {
+    num=parseInt(prompt("1:for add \n 2:for display \n 3:for edit \n 4:for delete \n 5:for exit\n"))
+    if (num==1) {
+        add=(prompt("add element"))
+        todo.push(add)
+    }else if (num==2) {
+        str=``
+        for(i in todo){
+            str+=`[${+[i]+1} ]${todo[i]}\n`
+
+        }
+        alert(str)
+    }
+    else if (num==3) {
+        str=``
+        for(i in todo){
+            str+=`[${+[i]+1} ]${todo[i]}\n`
+
+        }
+        edit=parseInt(prompt("which syntax you want to edit \n"+str))
+        i=edit-1
+        update=(prompt("enter"))
+        todo[i]=update
+        up=``
+        for(i in todo){
+            up+=`[${+[i]+1} ]${todo[i]}\n`
+
+        }
+        alert(up)
+    }
+    else if (num==4) {
+        str=``
+        for(i in todo){
+            str+=`[${+[i]+1} ]${todo[i]}\n`
+
+        }
+        dlt=parseInt(prompt("which syntax you want to delete \n"+str))
+        todo.splice(dlt-1,1)
+        dt=``
+        for(i in todo){
+            dt+=`[${+[i]+1} ]${todo[i]}\n`
+
+        }
+        alert(dt)
+    }
+    else if (num==5) {
+        break
+    }
+}
