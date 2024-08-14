@@ -402,53 +402,123 @@
 // y=JSON.parse(x)
 // console.log(y);
 
-let todo=[]
-while (true) {
-    num=parseInt(prompt("1:for add \n 2:for display \n 3:for edit \n 4:for delete \n 5:for exit\n"))
-    if (num==1) {
-        add=(prompt("add element"))
-        todo.push(add)
-    }else if (num==2) {
-        str=``
-        for(i in todo){
-            str+=`[${+[i]+1} ]${todo[i]}\n`
+// let todo=[]
+// while (true) {
+//     num=parseInt(prompt("1:for add \n 2:for display \n 3:for edit \n 4:for delete \n 5:for exit\n"))
+//     if (num==1) {
+//         add=(prompt("add element"))
+//         todo.push(add)
+//     }else if (num==2) {
+//         str=``
+//         for(i in todo){
+//             str+=`[${+[i]+1} ]${todo[i]}\n`
 
-        }
-        alert(str)
-    }
-    else if (num==3) {
-        str=``
-        for(i in todo){
-            str+=`[${+[i]+1} ]${todo[i]}\n`
+//         }
+//         alert(str)
+//     }
+//     else if (num==3) {
+//         str=``
+//         for(i in todo){
+//             str+=`[${+[i]+1} ]${todo[i]}\n`
 
-        }
-        edit=parseInt(prompt("which syntax you want to edit \n"+str))
-        i=edit-1
-        update=(prompt("enter"))
-        todo[i]=update
-        up=``
-        for(i in todo){
-            up+=`[${+[i]+1} ]${todo[i]}\n`
+//         }
+//         edit=parseInt(prompt("which syntax you want to edit \n"+str))
+//         update=(prompt("enter"))
+//         todo[i-1]=update
+//         up=``
+//         for(i in todo){
+//             up+=`[${+[i]+1} ]${todo[i]}\n`
 
-        }
-        alert(up)
-    }
-    else if (num==4) {
-        str=``
-        for(i in todo){
-            str+=`[${+[i]+1} ]${todo[i]}\n`
+//         }
+//         alert(up)
+//     }
+//     else if (num==4) {
+//         str=``
+//         for(i in todo){
+//             str+=`[${+[i]+1} ]${todo[i]}\n`
 
-        }
-        dlt=parseInt(prompt("which syntax you want to delete \n"+str))
-        todo.splice(dlt-1,1)
-        dt=``
-        for(i in todo){
-            dt+=`[${+[i]+1} ]${todo[i]}\n`
+//         }
+//         dlt=parseInt(prompt("which syntax you want to delete \n"+str))
+//         todo.splice(dlt-1,1)
+//         dt=``
+//         for(i in todo){
+//             dt+=`[${+[i]+1} ]${todo[i]}\n`
 
-        }
-        alert(dt)
-    }
-    else if (num==5) {
-        break
-    }
-}
+//         }
+//         alert(dt)
+//     }
+//     else if (num==5) {
+//         break
+//     }
+// }
+
+
+
+
+
+
+
+// call by value
+
+// function ab() {
+//     let a=10
+//     cd(a)
+//     console.log(a);
+// }
+// function cd(x) {
+//     x+=1
+//     console.log(x);
+// }
+
+// ab()
+
+
+
+
+
+// call by reference
+// function ab() {
+//     let a=[10]
+//     cd(a)
+//     console.log(a[0]);
+// }
+// function cd(x) {
+//     x[0]+=1
+//     console.log(x[0]);
+// }
+
+// ab()
+
+
+
+// function ab(a,b) {
+//     function cd() {
+//         c=a+b
+//         return c
+//     }
+//     return cd
+// }
+
+
+// x=ab(2,4)
+// console.log(x());
+
+
+
+
+
+
+// document.getElementById("age").value="heyyyyy"
+// document.getElementById("hlo").innerHTML="<h1>loll</h1>"
+
+
+// document.getElementById("hlo").setAttribute("class","heyy")
+// x=document.getElementById("hlo").getAttribute("class")
+// console.log(x);
+// document.getElementById("hlo").style.color="rgba(100,111,233,333)"
+// document.getElementById("hlo").style.fontWeight="700"
+
+
+const btn=document.createElement("button")
+btn.textContent="clic me"
+document.getElementById("hlo").appendChild(btn)
