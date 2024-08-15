@@ -425,12 +425,7 @@
 //         edit=parseInt(prompt("which syntax you want to edit \n"+str))
 //         update=(prompt("enter"))
 //         todo[i-1]=update
-//         up=``
-//         for(i in todo){
-//             up+=`[${+[i]+1} ]${todo[i]}\n`
-
-//         }
-//         alert(up)
+        
 //     }
 //     else if (num==4) {
 //         str=``
@@ -519,6 +514,57 @@
 // document.getElementById("hlo").style.fontWeight="700"
 
 
-const btn=document.createElement("button")
-btn.textContent="clic me"
-document.getElementById("hlo").appendChild(btn)
+// const btn=document.createElement("button")
+// btn.textContent="clic me"
+// document.getElementById("hlo").appendChild(btn)
+
+
+
+let todo=[]
+while (true) {
+    select=parseInt(prompt("1:add \n 2:display \n 3:edit \n 4:delete \n 5: exit"))
+    if (select==1) {
+        key=prompt("key")
+        value=prompt("value")
+        let out={};
+        out[key]=value
+        todo.push(out)
+    }
+    else if (select==2) {
+        
+        str=``
+        for(i in todo)
+            {
+                str += `${+[i]+1}: ${JSON.stringify(todo[i])}\n`
+            }
+            alert(str)
+    }
+    else if (select==3) {
+        str=``
+        for(i in todo)
+            {
+                str += `${+[i]+1}: ${JSON.stringify(todo[i])}\n`
+            }
+            
+            index=parseInt(prompt(str+"enter index"))
+            item=todo[index-1]
+            edit=prompt(str+"enter the key u want to edit")
+            newvalue=prompt("writeee")
+            item[edit]=newvalue
+    }
+    else if (select==4) {
+        str=``
+        for(i in todo)
+            {
+                str += `${+[i]+1}: ${JSON.stringify(todo[i])}\n`
+            }
+    let    dlt=parseInt(prompt(str+"indux you want to delete"))
+            todo.splice(dlt-1,1)
+    }
+    else if (select==5) {
+        break
+    }
+    else {
+       alert("you enterd wrong") 
+    }
+}
