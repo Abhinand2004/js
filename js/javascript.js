@@ -519,52 +519,68 @@
 // document.getElementById("hlo").appendChild(btn)
 
 
+// function fun(a) {
+    
+//     if(a.value=="")
+       
+//         {
+//             alert("invalid")
+           
+//         }
+//         else{
+//            let  value=parseInt(a.value)
+//             document.getElementById("out").textContent=value**2
+//         }
+// }
 
-let todo=[]
-while (true) {
-    select=parseInt(prompt("1:add \n 2:display \n 3:edit \n 4:delete \n 5: exit"))
-    if (select==1) {
-        key=prompt("key")
-        value=prompt("value")
-        let out={};
-        out[key]=value
-        todo.push(out)
+
+
+// function add() {
+//    let a=parseInt(document.getElementById("t1").value)
+//    let b=parseInt(document.getElementById("t2").value)
+//     document.getElementById("output").textContent=a+b
+// }
+
+// function sub() {
+//     let a=parseInt(document.getElementById("t1").value)
+//     let b=parseInt(document.getElementById("t2").value)
+//      document.getElementById("output").textContent=a-b
+//  }
+
+// function mul() {
+//     let a=parseInt(document.getElementById("t1").value)
+//     let b=parseInt(document.getElementById("t2").value)
+//      document.getElementById("output").textContent=a*b
+//  }
+
+// function div() {
+//     let a=parseInt(document.getElementById("t1").value)
+//     let b=parseInt(document.getElementById("t2").value)
+//      document.getElementById("output").textContent=a/b
+//  }
+
+// function table() {
+//     let a=parseInt(document.getElementById("numb").value )
+//    str=``
+//    for(i=1;i<=10;i++)
+//     {
+//         str+=`<h1>${i} X ${a} = ${i*a}</h1>`
+// }
+
+// document.getElementById("out").innerHTML=str
+// document.getElementById("numb").value=""
+// }
+
+
+let main=[]
+
+function add() {
+    let a=document.getElementById("list").value
+   main.push(a)
+   str=``
+    for(i in main){
+        str+=`<h1>${main[i]}`
     }
-    else if (select==2) {
-        
-        str=``
-        for(i in todo)
-            {
-                str += `${+[i]+1}: ${JSON.stringify(todo[i])}\n`
-            }
-            alert(str)
-    }
-    else if (select==3) {
-        str=``
-        for(i in todo)
-            {
-                str += `${+[i]+1}: ${JSON.stringify(todo[i])}\n`
-            }
-            
-            index=parseInt(prompt(str+"enter index"))
-            item=todo[index-1]
-            edit=prompt(str+"enter the key u want to edit")
-            newvalue=prompt("writeee")
-            item[edit]=newvalue
-    }
-    else if (select==4) {
-        str=``
-        for(i in todo)
-            {
-                str += `${+[i]+1}: ${JSON.stringify(todo[i])}\n`
-            }
-    let    dlt=parseInt(prompt(str+"indux you want to delete"))
-            todo.splice(dlt-1,1)
-    }
-    else if (select==5) {
-        break
-    }
-    else {
-       alert("you enterd wrong") 
-    }
+    document.getElementById("out").innerHTML=str
+    document.getElementById("list").value=""
 }
