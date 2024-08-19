@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 200px;
+    font-weight: 900;
+    animation-name: one;
+    animation-iteration-count: 12;
+    animation-duration: 1s;
+}
+
+@keyframes one{
+    0%{
+        font-size: 0px;
+    font-weight: 100;
+    }
+    100%{
+        font-size: 200px;
+    font-weight: 900;
+    }
+}
