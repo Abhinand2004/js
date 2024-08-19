@@ -574,13 +574,36 @@
 
 let main=[]
 
+
+
+
+
+
 function add() {
     let a=document.getElementById("list").value
    main.push(a)
    str=``
-    for(i in main){
-        str+=`<h1>${main[i]}`
-    }
-    document.getElementById("out").innerHTML=str
-    document.getElementById("list").value=""
+   for(i in main){
+       str+=`<li>${main[i]} <button onclick="dlt(${i})">delete</button></li>`
+   }
+   document.getElementById("out").innerHTML=str
+   document.getElementById("list").value=""
+
+  
 }
+
+
+    // document.getElementById("out").textContent=5*2
+
+    function dlt(index){
+        main.splice(index,1);
+        str=``
+        for(i in main){
+            str+=`<li>${main[i]} <button onclick="dlt(${i})">delete</button></li>`
+        }
+        document.getElementById("out").innerHTML=str
+        document.getElementById("list").value=""
+    }
+
+
+
