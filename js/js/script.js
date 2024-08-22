@@ -171,3 +171,121 @@
   
 //    console.log(val);
 // })
+
+
+
+
+// a=[
+//     {name:"abhi",age:20},
+//     {name:"leoo",age:20},
+//     {name:"heyy",age:20},
+//     {name:"loll",age:20},
+//     {name:"riyas",age:20},
+//     {name:"arjun",age:20},
+//     {name:"akhil",age:20},
+//     {name:"akhil",age:20},
+//     {name:"hitler",age:20},
+
+// ]
+
+// let x=a.find((dt)=>{
+//     return dt.name=="abhi"
+// })
+// console.log(x);
+
+
+// let y=a.filter((d)=>{
+//     return name=="akhil"
+// })
+// console.log(y);
+
+
+
+
+// let arr=[]
+// function add() {
+//     let a=document.getElementById("text").value
+//     arr.push(a)
+//    getData()
+ 
+// }
+
+// function getData(){
+//     str=``
+//     arr.map((i,index)=>{
+//         str+=`<li>${i}  <button onclick="edit(${index})">Edit</button><button onclick="dlt(${index})">delete</button></li>`
+//     })
+//     document.getElementById("print").innerHTML=str
+//     document.getElementById("text").value=""
+// }
+// getData()
+// function dlt(index) {
+//     console.log(index);
+//     arr.splice(index,1)
+//     getData()
+// }
+
+
+// function edit(index) {
+// console.log(index);
+// let editData=prompt(`old data id   "${arr[index]} "   if you want to edit this then type in input field`);
+// if(editData!=null){
+//     arr[index]=editData
+// }
+// getData()    
+// }
+
+
+
+
+
+
+
+
+// let arr=[]
+
+// function cll() {
+//     str=   ``
+//     arr.map((i,index)=>{
+//         str+=`<li>${i} : <button onclick="edit(${index})">edit</button> or <button onclick="dlt(${index})">delete</button></li>`
+//     })
+//     document.getElementById("print").innerHTML=str
+//     document.getElementById("text").value=""
+
+
+// }
+// cll()
+// function add() {
+//     let x=document.getElementById("text").value
+//     arr.push(x)
+//     cll()
+
+// }
+// function edit(index) {
+//     y=prompt("edit ")
+//     arr[index]=y
+//     cll()
+// }
+
+// function dlt(index) {
+//     arr.splice(index,1)
+//     cll()
+// }
+
+let a=[
+    {name:"abhi",age:20},
+    {name:"leoo",age:20},
+    {name:"heyy",age:20},
+    {name:"loll",age:20},
+    {name:"riyas",age:20},
+    {name:"arjun",age:20},
+    {name:"akhil",age:20},
+    {name:"akhil",age:20},
+    {name:"hitler",age:20},
+
+]
+
+let x=a.reduce((total,y)=>{
+    return total+y.age
+},0)
+console.log(x);
