@@ -1,71 +1,38 @@
-
-// trycatch
-
-// console.log("start");
-
-// // a=0
-// // c=a+b
-// // console.log(c);
-// try {
-//     a=0
-//     c=a+b
-//     console.log(c);
-// } catch  {
-//     console.log("b is not defined");
-// }
-
-// finally{
-//     console.log("final");
-// }
-
-// console.log("end");
-
-
-
-// function order(callback) {
-//     setTimeout(()=>{
-//         console.log("food ordered");
-//         callback()
-//     },2000)
-// }
-
-// function decorate(callback) {
-//     setTimeout(()=>{
-//         console.log("decorated");
-//         callback()
-//     },2000)
-// }
-
-// function arrange(callback) {
-//     setTimeout(()=>{
-//         console.log("arrange");
-//         callback()
-//     },2000)
-// }
-
-// order(()=>{
-//     decorate(()=>{
-//         arrange(()=>{
-//             console.log("all the task are completed");
-//         })
-//     })
-// })
-
-
-
-// function fetchData() {
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(() => {
-//             reject(3)
-            
-//         }, 1000);
-//     })
+function GetData() {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((res)=>{
+        return res.json()
+    })
+    .then((data)=>{
+        
+        abc=``
+        data.map((content)=>{
+            abc=`
+            <tr>
+            <th>ID</th>
+            <th>USER_ID</th>
+            <th>TITLE</th>
+            <th>BODY</th>
+            </tr>
+           `
+        })
     
-// }
+        str=``
+        data.map((content)=>{
+            str+=`
+            <tr>
+            <td>${content.userId}</td>
+            <td>${content.id}</td>
+            <td>${content.title}</td>
+            <td>${content.body}</td>
 
-// fetchData().then((data)=>{
-//     console.log(data);
-// }).catch((error)=>{
-//     console.log("reject");
-//     console.log(error);
-// })
+            </tr>`
+        })
+        document.getElementById("body1").innerHTML=abc
+
+        document.getElementById("body2").innerHTML=str
+    })
+    .catch((error)=>{
+        alert(error)
+    })
+}
