@@ -1,47 +1,42 @@
-let arr=[]
+function GetData() {
+    fetch("https://jsonplaceholder.typicode.com/comments")
+    .then((res)=>{
+        return res.json()
+    })
+    .then((data)=>{
+        
+        abc=``
+        data.map((content)=>{
+            abc=`
+            <tr>
+            <th>POST-ID</th>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
 
-function display() {
-
-    str=``
-    for(i in arr){
-        str+=`<li>${arr[i]} <button onclick="edit(${i})">edit</button> or <button onclick="dlt(${i})">delete</button></li>`
-    }
-    document.getElementById("display").innerHTML=str
-    document.getElementById("name").value=""
-    document.getElementById("num").value=""
-
-
-}
-display()
-
-function add() {
-name=document.getElementById("name").value
-num=document.getElementById("num").value
-
-    if(name && num ==null){
-        alert("enter something")
-
-    }else{
-        arr.push(`${name}:${num}`)
-    display()
+            <th>BODY</th>
+            </tr>
+           `
+        })
+    
+        str=``
+        data.map((content)=>{
+            str+=`
+            <tr>
+            <td>${content.postId}</td>
+            <td>${content.id}</td>
+            <td>${content.name}</td>
+            <td>${content.email}</td>
+            <td>${content.body}</td>
 
 
-    }
-}
-function edit(i) {
-    x=prompt("enter new name")
-    y=prompt("enter new number")
+            </tr>`
+        })
+        document.getElementById("body1").innerHTML=abc
 
-    if (x&&y !=null) {
-        arr[i]=`${x}:${y}`
-    display()
-
-    }
-    else{
-        alert("enter something")
-    }
-}
-function dlt(i) {
-    arr.splice(i,1)
-    display()
+        document.getElementById("body2").innerHTML=str
+    })
+    .catch((error)=>{
+        alert(error)
+    })
 }
