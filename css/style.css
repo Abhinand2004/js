@@ -1,94 +1,27 @@
-/* th{
-    border: 1px solid black;
-    text-align: center;
-    justify-content: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: aqua;
-
-}
-table{
-    border: 1px solid black;
-    text-align: center;
-    justify-content: center;
-    width: 80%;
-    height: 60%;
-    background-color: aquamarine;
-
-
-}
-
-td{
-    border: 1px solid black;
-    text-align: center;
-    justify-content: center;
-    background-color: aqua;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
-}
-button {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    height: 50px;
-    width: 200px;
-    border-radius: 7px;
-    color: black;
-    border-style: none;
-    background-color: rgba(243, 184, 74, 0.87);
-    padding-top: 100px;
-    box-shadow: 10px -10px 7px 10px rgba(253, 253, 253, 0.2);
-}
-
 body{
-    height: 800vh;
-    width: 100%;
-    top: 30px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
+    width: 100vw;
+    height: 1000vh;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
 
-}.btn{
-    top: 100px;
-}.one {
+li{
+    list-style: none;
+}
+
+
+.div1{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+   padding-left: 50px;
+
+}
+
+.asd{
+    width: 300px;
     height: 200px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}.two{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}.three{
-    width: 94%;
-    height: 99%;
-    background-color: aqua;
-
-}.body1{
-    background-color: aqua;
-}
-.body2{
-    background-color: aqua;
-} */
-
-table{
     border: 1px solid black;
-    text-align: center;
-    justify-content: center;
-    width: 80%;
-    height: 60%;
-    background-color: aquamarine;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
-}
-button{
-    width: 200px;
-    height: 50px;
-    padding-top: 10px;
-}
-td{
-    border: 1px solid rgb(209, 203, 203);
-}th{
-    border: 1px solid rgb(90, 87, 87);
 }
