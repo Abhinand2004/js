@@ -16,12 +16,12 @@ async function GetData(){
             <div class="cardbottom">
                     <P class="p0">${product.category}</P>
                     <p class="p1">${product.brand}</p>
-                    <p class="title">${product.title}</p>
+                    <span class="title"> <p >${product.title}<img src="images/fa_62673a.png" alt=""></p></span>
                    <div class="disc">
                     <p class="p2">$${product.price}</p>
-                    <p class="p3">${product.discountPercentage}%  off</p>
+                    <p class="p3">${product.discountPercentage}<span class="pdetail">%  off</span></p>
                    </div>
-                    <p class="p4"><span>Size:</span>${product.dimensions.width}</p>
+                    <p class="p4"><span>Size:</span >${product.dimensions.width}</p>
             </div>
         </div>
             
@@ -31,5 +31,7 @@ async function GetData(){
     }
   
 }
+
+
 
 GetData()
