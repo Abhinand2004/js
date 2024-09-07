@@ -10,8 +10,11 @@ async function GetData(){
         products.map((product)=>{
             str+=`
             <div class="card">
+<a href="pages/details.html?id=${product.id}">
+
             <div class="cardtop">
-                <img src="${product.images}" alt="" id="img">
+    
+                <img src="${product.thumbnail}" alt="" id="img">
             </div>
             <div class="cardbottom">
                     <P class="p0">${product.category}</P>
@@ -24,7 +27,7 @@ async function GetData(){
                     <p class="p4"><span>Size:</span >${product.dimensions.width}</p>
             </div>
         </div>
-            
+        </a>
             `
         })
         document.getElementById("mainside").innerHTML=str

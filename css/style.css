@@ -23,7 +23,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;}
 .sidepart{
-    width: 16%;
+    width: 17%;
    background-color: white;
 
 }
@@ -31,9 +31,9 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-  padding: 10px;
+    row-gap: 20px;
   padding-inline: 10px;
-  column-gap: 10px;
+ justify-content: space-around;
 }
 .container{
     width: 100%;
@@ -41,6 +41,7 @@
     gap: 10px;
 
     display: flex;
+   
     background-color: rgb(237, 241, 241);
 }
 
@@ -62,6 +63,7 @@
   justify-content: space-evenly;
   padding: 6px;
   padding-left: 10px;
+  transition: .5s;
   
 }.p0{
     font-weight: 600;
@@ -125,7 +127,16 @@
     height: 20px;
 }.title{
     gap: 20px;
-}.h1{
+}h2{
     width: 100%;
-    hei
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}.cardbottom:hover{
+    transform: translateY(-20px);
+}
+
+a{
+    text-decoration: none;
 }
