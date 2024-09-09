@@ -48,14 +48,16 @@
 .card{
     width: 16rem;
     height: 26rem;
-    
+    border: 1px solid rgb(200, 234, 243);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 10px;
 }.cardtop{
     width: 100%;
     height: 70%;
-   background-color: white;
-
+   border-radius: 10px;
+background-color: cornsilk;
+opacity: 1;
 }.cardbottom{
-    background-color: rgb(251, 253, 253);
     width: 100%;
     height: 30%;
     display: flex;
@@ -64,6 +66,8 @@
   padding: 6px;
   padding-left: 10px;
   transition: .5s;
+  border-radius: 10px;
+background-color: white;
   
 }.p0{
     font-weight: 600;
@@ -111,7 +115,8 @@
 }.serch{
     width: 300px;
     height: 30px;
-    padding-left: 270px;
+    border-style: none;
+
 }button{
     height: 30px;
     width: 100px;
@@ -127,6 +132,9 @@
     height: 20px;
 }.title{
     gap: 20px;
+    color: black;
+    font-weight: 800;
+    font-size: 17px;
 }h2{
     width: 100%;
     height: 60px;
@@ -139,4 +147,13 @@
 
 a{
     text-decoration: none;
+} input[type="text"]:focus{
+    border: none;
+    outline: none; 
+}.cardtop:hover{
+    transition: .5s;
+}.login{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 7px;
+    border-style: none;
 }
