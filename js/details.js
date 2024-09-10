@@ -1,22 +1,25 @@
 let url=window.location.href;
 let urlparams=new URLSearchParams(url.split("?")[1])
 let id=urlparams.get("id")
-console.log(id);
-let itm
-
-
+var itm
+let data
 async function GetDetails(){
     const res= await fetch(`https://dummyjson.com/products/${id}`)
-    const data=await res.json()
-    console.log(data);
+     data=await res.json()
     const discountDecimal = data.discountPercentage / 100;
     const remainingFactor = 1 - discountDecimal;
     const ogprice = data.price/ remainingFactor
+    console.log(id);
+    
 
     document.getElementById("card").innerHTML=`
     <div class="image" ><img id="imagee" src="${data.thumbnail}" alt="">
     <div class="btn"><button class="b2">BuyNow</button>
-    <button class="b1">AddToCart</button></div></div>
+<a href="pages/cart.html?id=${id}">
+  
+    <button class="b1" onclick="addToCart()"> AddTocart</button>
+    </a>
+    </div></div>
 
 
 
@@ -51,6 +54,13 @@ async function GetDetails(){
 GetDetails()
 
 function changePic(image){
-  console.log("heyyy");
   document.getElementById("imagee").src=`${image}`
+}
+
+function addToCart(){
+
+  console.log(data);
+
+  localStorage.setItem(data.id,JSON.stringify(data))
+  
 }
