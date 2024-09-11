@@ -15,10 +15,7 @@ async function GetDetails(){
     document.getElementById("card").innerHTML=`
     <div class="image" ><img id="imagee" src="${data.thumbnail}" alt="">
     <div class="btn"><button class="b2">BuyNow</button>
-<a href="pages/cart.html?id=${id}">
-  
     <button class="b1" onclick="addToCart()"> AddTocart</button>
-    </a>
     </div></div>
 
 
@@ -62,5 +59,7 @@ function addToCart(){
   console.log(data);
 
   localStorage.setItem(data.id,JSON.stringify(data))
+  window.location.href="../pages/cart.html"
   
 }
+

@@ -1,13 +1,36 @@
+function SetCart(){
+    str=``
+    for(i=0;i<localStorage.length;i++){
+        const key=localStorage.key(i)
+        const value=JSON.parse(localStorage.getItem(key));
+        str+=`
+    <div class="address">
+        <h3>FromSavedAddress</h3>
+        <button>EnterDelivaryPincode</button>
+    </div>
+    <div id="item">
+        <div id="image">
+            <img src="${value.thumbnail}" alt="">
+        </div>
+        <div id="details">
+            <span class="name">${value.title}</span>
+            <span class="price">$${value.price}</span>
+         <span class="button"">   <button class="btn">BUY NOW</button><button class="btn" onclick='dlt(${value.id})'>Remove</button> </span>
+        </div>
+    </div>
 
-let url=window.location.href;
-let urlparams=new URLSearchParams(url.split("?")[1])
-let id=urlparams.get("id")
-console.log(id);
-
-async function GetDetails(){
-    const res= await fetch(`https://dummyjson.com/products/${id}`)
-     data=await res.json()
-     
+    
+        `
+        
     }
+    document.getElementById("lside").innerHTML=str
+}
 
-    GetDetails()
+function dlt(key){
+localStorage.removeItem(key)
+SetCart();
+
+}
+
+
+SetCart()
