@@ -15,7 +15,7 @@ async function GetDetails(){
     document.getElementById("card").innerHTML=`
     <div class="image" ><img id="imagee" src="${data.thumbnail}" alt="">
     <div class="btn"><button class="b2">BuyNow</button>
-    <button class="b1" onclick="addToCart()"> AddTocart</button>
+    <div >${localStorage.getItem(id)? `<button class="b1" onclick="addToCart()"> GotoCart</button>`:` <button class="b1" onclick="addToCart()">AddToCart</button>`}</div>
     </div></div>
 
 
@@ -34,6 +34,7 @@ async function GetDetails(){
     </div>
     
     `
+    
 
     let str=``
     data.images.map((img)=>{
